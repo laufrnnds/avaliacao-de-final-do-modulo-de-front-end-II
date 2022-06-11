@@ -72,11 +72,7 @@ footer {
 }
 
 button {
-  background: linear-gradient(
-    0deg,
-    var(--background-cor1) 0%,
-    var(--background-cor2) 100%
-  );
+  background: linear-gradient(0deg,var(--background-cor1) 0%,var(--background-cor2) 100%);
   color: var(--bs-black);
   font-size: 12px;
   text-transform: uppercase;
@@ -131,11 +127,7 @@ input {
 
 .overlay {
   width: 200%;
-  background: linear-gradient(
-    0deg,
-    var(--background-cor2) 0%,
-    var(--background-cor1) 100%
-  );
+  background: linear-gradient(0deg,var(--background-cor2) 0%,var(--background-cor1) 100%);
   color: var(--bs-black);
   left: -100%;
   transform: translateX(0);
@@ -190,35 +182,21 @@ input {
 }
 
 .container-range-0 {
-  box-shadow: 0 14px 28px var(--sombra1-container),
-    0 10px 10px var(--sombra2-container);
+  box-shadow: 0 14px 28px var(--sombra1-container),0 10px 10px var(--sombra2-container);
 }
 
 .overlay-range-0 {
-  background: linear-gradient(
-    0deg,
-    var(--background-cor2) 0%,
-    var(--background-cor1) 100%
-  );
+  background: linear-gradient(0deg,var(--background-cor2) 0%,var(--background-cor1) 100%);
 }
 
 .btns-forms-range-0 {
-  background: linear-gradient(
-    0deg,
-    var(--background-cor1) 0%,
-    var(--background-cor2) 100%
-  );
+  background: linear-gradient(0deg,var(--background-cor1) 0%,var(--background-cor2) 100%);
   color: var(--bs-black);
 }
 .btn-dropdown-range-range-0 {
-  background: linear-gradient(
-    0deg,
-    var(--background-cor1) 0%,
-    var(--background-cor2) 100%
-  );
+  background: linear-gradient(0deg,var(--background-cor1) 0%,var(--background-cor2) 100%);
   color: var(--bs-black);
-  box-shadow: 0 14px 28px var(--sombra1-container),
-    0 10px 10px var(--sombra2-container);
+  box-shadow: 0 14px 28px var(--sombra1-container),0 10px 10px var(--sombra2-container);
 }
 
 .btns-transparentes-range-0 {
@@ -245,27 +223,15 @@ input {
 }
 
 .overlay-range-1 {
-  background: linear-gradient(
-    0deg,
-    var(--background-cor3) 0%,
-    var(--background-cor2) 100%
-  );
+  background: linear-gradient(0deg,var(--background-cor3) 0%,var(--background-cor2) 100%);
 }
 
 .btns-forms-range-1 {
-  background: linear-gradient(
-    0deg,
-    var(--background-cor2) 0%,
-    var(--background-cor3) 100%
-  );
+  background: linear-gradient(0deg,var(--background-cor2) 0%,var(--background-cor3) 100%);
   color: var(--bs-gray-300);
 }
 .btn-dropdown-range-range-1 {
-  background: linear-gradient(
-    0deg,
-    var(--background-cor2) 0%,
-    var(--background-cor3) 100%
-  );
+  background: linear-gradient(0deg,var(--background-cor2) 0%,var(--background-cor3) 100%);
   box-shadow: 0 14px 28px var(--sombra3-container),
     0 10px 10px var(--sombra4-container);
 }
@@ -284,34 +250,24 @@ input {
 }
 
 .container-range-2 {
-  box-shadow: 0 14px 28px var(--sombra3-container),
-    0 10px 10px var(--sombra4-container);
+  box-shadow: 0 14px 28px var(--sombra3-container),0 10px 10px var(--sombra4-container);
 }
 
 .overlay-range-2 {
-  background: linear-gradient(
-    0deg,
-    var(--background-cor4) 0%,
-    var(--background-cor3) 100%
-  );
+  background: linear-gradient(0deg,var(--background-cor4) 0%,var(--background-cor3) 100%);
 }
 
 .btns-forms-range-2 {
-  background: linear-gradient(
-    0deg,
-    var(--background-cor3) 0%,
-    var(--background-cor4) 100%
-  );
+  background: linear-gradient(0deg,var(--background-cor3) 0%,var(--background-cor4) 100%);
   color: var(--bs-gray-300);
 }
 .btn-dropdown-range-range-2 {
-  background: linear-gradient(
-    0deg,
-    var(--background-cor3) 0%,
-    var(--background-cor4) 100%
-  );
-  box-shadow: 0 14px 28px var(--sombra3-container),
-    0 10px 10px var(--sombra4-container);
+  background: linear-gradient(0deg,var(--background-cor3) 0%,var(--background-cor4) 100%);
+  box-shadow: 0 14px 28px var(--sombra3-container),0 10px 10px var(--sombra4-container);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: var(--bs-gray-400);
 }
 
 @keyframes mostrarAnimation {
@@ -327,9 +283,7 @@ input {
   }
 }
 
-input[type="range"]::-webkit-slider-thumb {
-  background: var(--bs-gray-400);
-}
+
 
 .typewriter {
   overflow: hidden;
@@ -350,3 +304,7 @@ input[type="range"]::-webkit-slider-thumb {
     border-right: 0;
   }
 }
+
+.scale-up-ver-top{animation:scale-up-ver-top .4s cubic-bezier(.39,.575,.565,1.000) both}
+
+@keyframes scale-up-ver-top{0%{transform:scaleY(.4);transform-origin:100% 0}100%{transform:scaleY(1);transform-origin:100% 0}}

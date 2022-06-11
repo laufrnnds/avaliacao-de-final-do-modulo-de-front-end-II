@@ -5,6 +5,7 @@ let inputDetalhamento = document.querySelector("#input-detalhamento");
 let btnEnviarRecado = document.querySelector("#btn-envia-recado");
 let btnAtualizarRecado = document.querySelector("#btn-atualizar-recado");
 let btnSair = document.querySelector("#btn-sair");
+let btnAdicionarNovoRecado = document.querySelector("#btn-novo-recado");
 let modalRecadoNovo = new bootstrap.Modal("#modal-adicionar-recado");
 let modalRecadoEditar = new bootstrap.Modal("#modal-editar-recado");
 let confirma = false;
@@ -15,8 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarRecados();
     alteraBackground();
 });
+btnAdicionarNovoRecado.addEventListener("click", () => {
+    let modaldoRecado = document.querySelector("#modal-adicionar-recado");
+    modaldoRecado.classList.add("scale-up-ver-top");
+});
 btnEnviarRecado.addEventListener("click", () => {
     enviarRecado();
+    let modaldoRecado = document.querySelector("#modal-adicionar-recado");
+    modaldoRecado.classList.add("scale-up-ver-top");
     modalRecadoNovo.hide();
 });
 btnSair.addEventListener("click", logout);
@@ -286,6 +293,8 @@ function enviarRecado() {
     }
 }
 function editarRecado(indice) {
+    let modaldoRecadoEditar = document.querySelector("#modal-editar-recado");
+    modaldoRecadoEditar.classList.add("scale-up-ver-top");
     let listaUser = buscarListaDeUsers();
     let emailLogado = sessionStorage.getItem("usuarioLogado");
     let userIndex = listaUser.findIndex((user) => { return user.login === emailLogado; });
