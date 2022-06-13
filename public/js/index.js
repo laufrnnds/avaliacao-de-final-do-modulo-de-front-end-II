@@ -155,9 +155,19 @@ function verificaInputsCadastro() {
     let validaCadastroNome = false;
     let validaCadastroEmail = false;
     let validaCadastroSenha = false;
+    let textoCadastro = document.querySelector("#texto-cadastro");
     if (inputCadastroNome.value === "" || inputCadastroNome.value.length < 3) {
         inputCadastroNome.focus();
         inputCadastroNome.setAttribute("style", "outline-color: red");
+        textoCadastro.innerHTML = ` 
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <div>Digite um nome com mais de 3 letras!</div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    `;
+        setTimeout(() => {
+            textoCadastro.innerHTML = "";
+        }, 2500);
     }
     else {
         inputCadastroNome.removeAttribute("style");
@@ -174,6 +184,15 @@ function verificaInputsCadastro() {
     if (inputCadastroSenha.value === "" || inputCadastroSenha.value.length < 8) {
         inputCadastroSenha.focus();
         inputCadastroSenha.setAttribute("style", "outline-color: red");
+        textoCadastro.innerHTML = ` 
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <div>A senha deve conter 8 dígitos!</div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    `;
+        setTimeout(() => {
+            textoCadastro.innerHTML = "";
+        }, 2500);
     }
     else {
         inputCadastroSenha.removeAttribute("style");
